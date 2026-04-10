@@ -1,16 +1,38 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 About the Project
+This is my **personal and professional portfolio website** built to showcase my skills, experience, and projects.
 
-Currently, two official plugins are available:
+In this portfolio, I have included all the important details about myself such as:
+- My educational background
+- My work experience
+- Internships I have completed
+- Projects I have worked on
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This website represents my journey, skills, and growth as a developer.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
+- Clean and modern UI
+- Responsive design (works on all devices)
+- Projects showcase section
+- Education and experience details
+- Contact section
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+The following technologies were used to build this portfolio:
+
+- **React.js** – For building the user interface  
+- **Material UI (MUI)** – For styling and components  
+
+---
+
+## 📬 Contact
+Feel free to connect with me through the contact section in the portfolio.
+
+
+
+
