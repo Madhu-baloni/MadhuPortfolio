@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Typography, Container, Grid, TextField, Button, Stack, IconButton, Paper, Snackbar, Alert } from '@mui/material';
-import { motion, AnimatePresence } from 'framer-motion';
 import { useForm, ValidationError } from '@formspree/react';
+import { motion } from 'framer-motion';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -12,7 +12,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID);
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID || "mgopjlgk");
   const [open, setOpen] = useState(false);
 
   const handleClose = (event, reason) => {

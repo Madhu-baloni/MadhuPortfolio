@@ -63,9 +63,7 @@ const Projects = () => {
             hidden: { opacity: 0 },
             show: {
               opacity: 1,
-              transition: {
-                staggerChildren: 0.2
-              }
+              transition: { staggerChildren: 0.2 }
             }
           }}
           initial="hidden"
@@ -92,102 +90,51 @@ const Projects = () => {
                     border: '1px solid rgba(255, 255, 255, 0.05)',
                     borderRadius: '20px',
                     overflow: 'hidden',
-                    transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+                    transition: 'all 0.4s',
                     '&:hover': {
                       transform: 'scale(1.02) translateY(-10px)',
                       borderColor: 'primary.main',
-                      boxShadow: '0 20px 40px -20px rgba(139, 92, 246, 0.5)',
-                      '& .project-media': {
-                        transform: 'scale(1.1)',
-                      },
-                      '& .project-overlay': {
-                        opacity: 1,
-                      }
                     },
                   }}
                 >
-                  <Box sx={{ position: 'relative', overflow: 'hidden' }}>
-                    <CardMedia
-                      component="img"
-                      className="project-media"
-                      height="220"
-                      image={project.image}
-                      alt={project.title}
-                      sx={{
-                        transition: 'transform 0.6s ease',
-                      }}
-                    />
-                    <Box
-                      className="project-overlay"
-                      sx={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        width: '100%',
-                        height: '100%',
-                        background: 'linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent)',
-                        display: 'flex',
-                        alignItems: 'flex-end',
-                        p: 3,
-                        opacity: 0.8,
-                        transition: 'opacity 0.4s ease',
-                      }}
-                    />
-                  </Box>
-                  <CardContent sx={{ flexGrow: 1, p: 3, zIndex: 1 }}>
-                    <Typography variant="h5" sx={{ mb: 1, fontWeight: 700 }}>
+                  <CardMedia
+                    component="img"
+                    height="220"
+                    image={project.image}
+                    alt={project.title}
+                  />
+
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography variant="h5" sx={{ fontWeight: 700 }}>
                       {project.title}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineBreak: 'normal', minHeight: '60px' }}>
+
+                    <Typography variant="body2" sx={{ mb: 2 }}>
                       {project.description}
                     </Typography>
-                    <Stack direction="row" flexWrap="wrap" gap={1} sx={{ mb: 3, minHeight: '64px', alignItems: 'flex-start' }}>
+
+                    <Stack direction="row" flexWrap="wrap" gap={1} sx={{ mb: 2 }}>
                       {project.tech.map((tag) => (
-                        <Chip
-                          key={tag}
-                          label={tag}
-                          size="small"
-                          sx={{
-                            background: 'rgba(139, 92, 246, 0.1)',
-                            color: 'primary.main',
-                            fontSize: '0.7rem',
-                            fontWeight: 600,
-                            borderRadius: '6px',
-                            border: '1px solid rgba(139, 92, 246, 0.2)'
-                          }}
-                        />
+                        <Chip key={tag} label={tag} size="small" />
                       ))}
                     </Stack>
-                    <Stack direction="row" spacing={2} sx={{ mt: 'auto' }}>
+
+                    <Stack direction="row" spacing={2}>
                       <Button
                         variant="contained"
-                        size="small"
-                        startIcon={<LaunchIcon sx={{ fontSize: 16 }} />}
+                        startIcon={<LaunchIcon />}
                         href={project.demo}
                         target="_blank"
                         fullWidth
-                        sx={{
-                          borderRadius: '10px',
-                          textTransform: 'none',
-                          fontWeight: 600,
-                        }}
                       >
                         Live Demo
                       </Button>
+
                       <Button
                         variant="outlined"
-                        size="small"
-                        startIcon={<GitHubIcon sx={{ fontSize: 16 }} />}
+                        startIcon={<GitHubIcon />}
                         href={project.github}
                         target="_blank"
-                        sx={{
-                          borderRadius: '10px',
-                          textTransform: 'none',
-                          fontWeight: 600,
-                          color: 'text.secondary',
-                          borderColor: 'rgba(255, 255, 255, 0.1)',
-                          '&:hover': { color: 'primary.main', background: 'rgba(139, 92, 246, 0.05)' }
-                        }}
                       >
                         Code
                       </Button>
@@ -198,6 +145,29 @@ const Projects = () => {
             </Grid>
           ))}
         </Grid>
+
+   
+        <Box sx={{ textAlign: "center", mt: 8 }}>
+          <Typography variant="h6" sx={{ color: "text.secondary" }}>
+            For more projects, visit my GitHub
+          </Typography>
+
+          <Button
+            variant="outlined"
+            startIcon={<GitHubIcon />}
+            href="https://github.com/Madhu-baloni"
+            target="_blank"
+            sx={{
+              mt: 2,
+              textTransform: "none",
+              fontWeight: 600,
+              borderRadius: "10px"
+            }}
+          >
+            View More Projects
+          </Button>
+        </Box>
+
       </Container>
     </Box>
   );
